@@ -1,0 +1,10 @@
+services:
+  php:
+    build:
+      context: "./docker/php"
+    image: oa-php83-zts-composer
+    container_name: oa-test
+    working_dir: /app
+    volumes:
+      - ".:/app"
+    tty: true
